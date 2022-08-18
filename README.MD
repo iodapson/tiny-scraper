@@ -1,4 +1,4 @@
-SAMPLE scraped HTML inside <body>
+SAMPLE scraped HTML <body>
 
 <header>
     <div class="inner">
@@ -6,7 +6,7 @@ SAMPLE scraped HTML inside <body>
             <h1>The Book Debrief</h1>
         </a>
         <h2>Rust drills, all based on 'The Book'. Check the Rust Official page to read 'The Book'</h2>
-        <a href="https://github.com/iodapson" class="button"><small>Follow me on</small>Github</a>
+        <a href="https://github.com/iodapson" class="button"><small>Follow me on </small>Github</a>
     </div>
 </header>
 <div id="content-wrapper">
@@ -30,6 +30,9 @@ TREES - Sample HTML above should be formatted into a tree that looks as follows:
           |
             -h1
         -h2
+        -a
+          |
+            -small
 -div
   |
     -div
@@ -49,7 +52,10 @@ QUERY - App should listen for input, or maybe, allow command-line argument keywo
         -a (0 class, 0 id)
           |
             -h1 (0 class, 0 id)
-        h2 (0 class, 0 id)
+        -h2 (0 class, 0 id)
+        -a (1 class, 0 id)
+          |
+            -small (0 class, 0 id)
 -div (0 class, 1 id)
   |
     -div (1 class, 0 id)
@@ -68,7 +74,10 @@ QUERY - Here is another query, this time for the content of each HTML element, u
         -a (h1)
           |
             -h1 (The Book Debrief)
-        h2 (Rust drills, all based on 'The Book'. Check the Rust Official page to read 'The Book')
+        -h2 (Rust drills, all based on 'The Book'. Check the Rust Official page to read 'The Book')
+        -a (small, Github)
+          |
+            -small (Follow me on )
 -div (div)
   |
     -div (div)
@@ -87,7 +96,10 @@ QUERY - Here is yet another query. This one has command-line argument "with-indi
         -a (0-0-0)
           |
             -h1 (0-0-0-0)
-        h2 (0-0-1)
+        -h2 (0-0-1)
+        -a (0-0-2)
+          |
+            -small (0-0-2-0)
 -div (1)
   |
     -div (1-0)
