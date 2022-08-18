@@ -6,7 +6,7 @@ SAMPLE scraped HTML inside <body>
             <h1>The Book Debrief</h1>
         </a>
         <h2>Rust drills, all based on 'The Book'. Check the Rust Official page to read 'The Book'</h2>
-        <a href="https://github.com/iodapson" class="button"><small>Follow me</small>Github</a>
+        <a href="https://github.com/iodapson" class="button"><small>Follow me on</small>Github</a>
     </div>
 </header>
 <div id="content-wrapper">
@@ -21,7 +21,7 @@ SAMPLE scraped HTML inside <body>
 FEATURES (Vision of what the app should be able to do)
 
 TREES - Sample HTML above should be formatted into a tree that looks as follows:
-
+```
 -header
   |
     -div
@@ -37,10 +37,11 @@ TREES - Sample HTML above should be formatted into a tree that looks as follows:
         -section
           |
             -h2
+```
 
 
 QUERY - App should listen for input, or maybe, allow command-line argument keywords like "show-class-and-id-count", which shpuld then print out:
-
+```
 -header (0 class, 0 id)
   |
     -div (1 class, 0 id)
@@ -56,10 +57,10 @@ QUERY - App should listen for input, or maybe, allow command-line argument keywo
         -section (1 class, 0 id)
           |
             -h2
-
+```
 
 QUERY - Here is another query, this time for the content of each HTML element, using command-line argument "content":
-
+```
 -header (div)
   |
     -div (a)
@@ -75,10 +76,10 @@ QUERY - Here is another query, this time for the content of each HTML element, u
         -section (h2, ...)
           |
             -h2 (RUST DRILLS)
-
+```
 
 QUERY - Here is yet another query. This one has command-line argument "with-indices" (a better arg name can come up later). Output could look as follows:
-
+```
 -header (0)
   |
     -div (0-0)
@@ -94,8 +95,8 @@ QUERY - Here is yet another query. This one has command-line argument "with-indi
         -section (1-0-0)
           |
             -h2 (1-0-0-0)
+```
 
-
-N.B - I hope I have been able to successfully hint at the direction which I am heading with this app. Think Rust-analyzer for HTML. It is my hope that these four starting features can be implemented and this project be made ready to be cargo installed or something similar so people can use it in their web-dev process. More queries can then be supported much later after this project has proved itself useful for public useage.
+N.B - I hope I have been able to successfully hint at the direction which I am heading with this app. Think Rust-analyzer for HTML. It is my hope that these four starting features can be implemented and this project be made ready to be cargo installed or something similar so people can use it in their web-dev process. More queries can then be supported much later after this project has proved itself useful for public usage.
 
 Thanks for reading.
